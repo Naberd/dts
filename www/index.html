@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="css/dts.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <title>DTS Application</title>
+    </head>
+    <body>
+        <div data-role="page" id="home" data-theme="a">
+        	<div data-role="header" data-position="inline">
+				<h1 id="hhome">DTS App - Home</h1>
+                
+			</div>
+			<div data-role="content" class="content" data-theme="a">
+                <select class="language"><option value="nl">Nederlands</option><option value="eng">English</option></select>
+               
+        	</div>
+            <div data-role="footer" data-theme="a" data-position="fixed" data-iconpos="bottom">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="#register">Registreer</a></li>
+                        <li><a href="#login">Inloggen</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div data-role="page" id="register" data-theme="a">
+            <div data-role="header" data-position="inline">
+                <h1 id="hregister">DTS App - Registreer</h1>
+                
+            </div>
+            <div data-role="content" class="content" data-theme="a">
+                <fieldset id="registerfieldset">
+                    <label for="username" >Gebruikersnaam:</label>
+                    <input type="text" name="username" id="rusername"/>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="remail"/>
+                    <label for="phone">Telefoonnummer:</label>
+                    <input type="number" name="phone" id="rphone"/>
+                    <label for="password">Wachtwoord:</label>
+                    <input type="password" name="password" id="rpassword"/>
+                    <label for="confirmpassword">Bevestig Wachtwoord:</label>
+                    <input type="password" name="confirmpassword" id="rconfirmpassword"/>
+                    <button type="submit" name="submit" id="rsubmit">Registreer</button>
+                </fieldset>
+            </div>
+            <div data-role="footer" data-theme="a" data-position="fixed" data-iconpos="bottom">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#register" class="ui-btn-active ui-state-persist">Registreer</a></li>
+                        <li><a href="#login">Inloggen</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="login" data-theme="a">
+            <div data-role="header" data-position="inline">
+                <h1 id="hlogin">DTS App - Inlogen</h1>
+                
+            </div>
+            <div data-role="content" class="content" data-theme="a">
+                <fieldset id="loginfieldset" >
+                    <label for="username">Gebruikersnaam:</label>
+                    <input type="text" name="username" id="username" value=""  />
+                    <label for="password">Wachtwoord:</label>
+                    <input type="password" name="password" id="password" value=""  />
+                    <button type="submit" name="submit" id="submit">Inloggen</button>
+                </fieldset>
+                <fieldset id="buttonfieldset" >
+                    <div id="mybutton"></div>
+                </fieldset>
+            </div>
+            <div data-role="footer" data-theme="a" data-position="fixed" data-iconpos="bottom">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#register">Registreer</a></li>
+                        <li><a href="#login" class="ui-btn-active ui-state-persist">Inloggen</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
